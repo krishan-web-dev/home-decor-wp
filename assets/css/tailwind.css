@@ -1,0 +1,4 @@
+@import "tailwindcss";
+
+/* Blocks Style Import */
+@source "../../../../plugins/hmdecor-blocks/blocks";

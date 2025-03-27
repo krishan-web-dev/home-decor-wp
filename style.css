@@ -1,0 +1,170 @@
+/*
+Theme Name: Home Decor
+Theme URI: https://yourwebsite.com/
+Author: Krishan Nanayakkara
+Description: A lightweight WooCommerce theme using Tailwind CSS.
+Version: 1.0
+License: GNU General Public License v2 or later
+Text Domain: hmdecor
+*/
+root{
+	--base_color: #121212;
+}
+
+
+section:not(.block__hero){
+  padding: 5em 0;
+}
+
+/* Hero Block */
+.block__hero .content{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 15px;
+
+	background: rgb(85 166 202);
+}
+
+.block__hero .content h2{
+	max-width: 320px;
+	color: #fff;
+}
+
+.block__hero .content p{
+	max-width: 550px;
+  line-height: 1.3;
+  font-weight: 400;
+  color: var(--base_color);
+}
+
+.block__hero .content .btn-style-1{
+	margin-top: 15px;
+	border: 1px solid #4f4b53;
+	color: var(--base_color);
+}
+
+.block__hero .image img{
+  height: 100%;
+}
+
+/* Featured Block */
+.product-collection{
+  background-color: #e0e0e0;
+}
+
+.product-collection ul.wp-block-woocommerce-product-template li{
+    background-color: #fff;
+    padding-bottom: 14px;
+    border-radius: 15px;
+    box-shadow: 2px 4px 2px #dbdbdb;
+}
+.product-collection h2{
+  --tw-font-weight: var(--font-weight-bold);
+  font-size: var(--text-3xl);    
+  font-weight: var(--font-weight-bold);
+  line-height: var(--tw-leading, var(--text-3xl--line-height));
+  text-transform: uppercase;
+}
+
+/* CTA Blocks */
+.block__cta .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  padding-left: 5vw;
+}
+.block__cta .content h2{
+  max-width: 18vw;
+  color: var(--base_color);
+}
+.block__cta .content p{
+  max-width: 550px;
+  line-height: 1.3;
+  font-weight: 400;
+  color: var(--base_color);
+}
+.block__cta .bg-cover{
+  border-radius: 20px;
+}
+
+/* Shop Page Product */
+.shop li.product.type-product{
+  text-align: center;
+  background: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.shop ul.products li.product .button{
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  width: fit-content;
+  text-align: center;
+}
+
+/*  My Account  */
+/* WooCommerce forms styling */
+.woocommerce-Input,
+.woocommerce-form-row input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-wood-500 focus:border-transparent;
+}
+
+.woocommerce-button,
+.woocommerce-form-login .button {
+    @apply bg-wood-600 text-white py-2 px-6 rounded-md hover:bg-wood-700 transition duration-200;
+}
+/* Button Style  */ 
+.btn-style-1,
+.button {
+  margin-top: 15px;
+  border: 1px solid #4f4b53;
+  color: var(--base_color);
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.4em;
+  line-height: 2.3em;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 500;    
+}
+
+.btn-style-1:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: #354654;
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.btn-style-1:hover {
+  color: #fff !important;
+}
+
+.btn-style-1:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+.btn-style-1:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.btn-style-1:active:before {
+  background: #3a0ca3;
+  background: #354654;
+}
