@@ -9,10 +9,8 @@
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
-
-get_header(); ?>
-
-<div class="container mx-auto px-4 py-8 lg:py-12">
+?>
+    <div class="container mx-auto">
     <!-- Account Header -->
     <div class="mb-8 text-center">
         <h1 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-2"><?php esc_html_e('My Account', 'home-decor'); ?></h1>
@@ -124,6 +122,4 @@ get_header(); ?>
             </div>
         </main>
     </div>
-</div>
-
-<?php get_footer(); ?>
+    </div>
