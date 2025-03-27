@@ -19,14 +19,16 @@ if (!defined('ABSPATH')) {
 
     <div class="flex flex-col lg:flex-row gap-8">
         <!-- Account Navigation -->
-        <nav class="w-full lg:w-64 flex-shrink-0">
+        <nav class="w-full lg:w-64 flex-shrink-0 mb-8">
             <div class="bg-white p-6 rounded-lg shadow-sm sticky top-4">
-                <div class="flex items-center gap-4 mb-6">
+                <div class="flex items-center gap-4 mb-1">                    
                     <?php echo get_avatar(get_current_user_id(), 60, '', '', ['class' => 'rounded-full']); ?>
                     <div>
                         <p class="font-medium"><?php echo esc_html(wp_get_current_user()->display_name); ?></p>
-                        <p class="text-sm text-gray-600"><?php echo esc_html(wp_get_current_user()->user_email); ?></p>
-                    </div>
+                    </div>                    
+                </div>
+                <div class="flex mb-6">
+                    <p class="text-sm text-gray-600"><?php echo esc_html(wp_get_current_user()->user_email); ?></p>
                 </div>
 
                 <ul class="space-y-2">
@@ -37,13 +39,7 @@ if (!defined('ABSPATH')) {
                                 <?php echo esc_html($label); ?>
                             </a>
                         </li>
-                    <?php endforeach; ?>
-                    <li>
-                        <a href="<?php echo esc_url(wp_logout_url(home_url())); ?>" 
-                           class="block px-4 py-2 rounded-md hover:bg-gray-100 text-gray-600 hover:text-gray-900 transition">
-                            <?php esc_html_e('Logout', 'home-decor'); ?>
-                        </a>
-                    </li>
+                    <?php endforeach; ?>                   
                 </ul>
             </div>
         </nav>

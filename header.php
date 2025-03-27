@@ -8,7 +8,7 @@
 <body <?php body_class(); ?>>
 <header class="bg-blue-600 text-white p-4">
     <div class="container mx-auto flex justify-between items-center">
-        <h1 class="text-xl font-bold"><?php bloginfo('name'); ?></h1>
+        <h1 class="text-xl font-bold"><a href="/"><?php bloginfo('name'); ?></a></h1>
         <nav>
             <?php wp_nav_menu(['theme_location' => 'primary', 'menu_class' => 'flex space-x-4']); ?>
         </nav>
